@@ -1,7 +1,7 @@
 """
-name1:maintainer
-name2:addition, subtraction
-name3:multiplication
+walid:maintainer
+member1:addition, subtraction
+member2:multiplication
 """
 class Complex:
     def __init__(self, re=0, im=0):
@@ -10,6 +10,15 @@ class Complex:
     
     def __str__(self):
         return str(self.re)+"+"+str(self.im)+"i"
+    
+    def add(self, c1): # (1+2i) + (2+3i) = 3+5i
+        c = Complex()
+        c.re = self.re + c1.re
+        c.im = self.im + c1.im 
+        return c
 
 c1 = Complex(1,2)
 print(c1)
+
+c2 = Complex(2,3)
+print(c1.add(c2))
