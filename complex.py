@@ -29,7 +29,7 @@ class Complex:
         c.im = self.re*c1.im + self.im*c1.re
         return c
     
-    def __sub__(self, c): # self + c
+    def __add__(self, c): # self + c
         return self.add(c)
 
 c1 = Complex(1,2)
